@@ -1,0 +1,63 @@
+<header class="topbar">
+  <nav class="navbar top-navbar navbar-expand-md navbar-light">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <b>
+          <img
+            src="./assets/images/logo.png"
+            alt="homepage"
+            class="light-logo"
+          />
+        </b>
+      </a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+            href="javascript:void(0)"
+            ><i class="ti-menu"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark"
+            href="javascript:void(0)"
+            ><i class="ti-menu"></i
+          ></a>
+        </li>
+        <li class="nav-item hidden-sm-down"></li>
+      </ul>
+      <ul class="navbar-nav my-lg-0">
+        <li class="nav-item hidden-xs-down search-box">
+          <a
+            class="nav-link hidden-sm-down waves-effect waves-dark"
+            href="javascript:void(0)"
+            ><i class="ti-search"></i
+          ></a>
+          <form class="app-search" (submit)="buscar(txtTermino.value)">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Buscar médico, hospital o usuario"
+              #txtTermino
+            />
+            <a class="srh-btn"><i class="ti-close"></i></a>
+          </form>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle waves-effect waves-dark"
+            href=""
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img [src]="usuario?.imagenUrl" alt="user" class="profile-pic" />
+          </a> 
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
